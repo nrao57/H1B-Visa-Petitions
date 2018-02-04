@@ -40,4 +40,4 @@ This map shows where in the US are the applicants trying to work
 
 ## Conclusions 
 The accuracy of the Logistic Regression Model is 0.954635108481 or **95%** 
-
+The accuracy of a Neural Network with 2 hidden layers with 100 neurons each (a relatively small network) is 0.955852508545 or **96%**
