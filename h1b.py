@@ -1,7 +1,8 @@
 #Predict whether a person will be certified or denied
 import pandas as pd
 import matplotlib.pyplot as plt
-import h1bfunctions 
+import h1bfunctions
+from h1b_tensor import DeepNN
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -31,21 +32,22 @@ print(ys.describe())
 
 #Transform and Scale Data
 scaler = preprocessing.StandardScaler()
-scaler.fit_transform(X_train)
+scaler.fit(X_train)
 
 #Logistic Regression
 LR = LogisticRegression()
-LR.fit(X_train, y_train)
-y_pred=LR.predict(X_test)
+LR.fit(scaler.transform(X_train), y_train)
+y_pred=LR.predict(scaler.transform(X_test))
 
-#Deep Neural Net 
-
+#Deep Neural Net
+y_train_codes = y_train.astype('category').cat.codes #convert y_training labels (certified = 0, denied = 1)
+dnn_acc = DeepNN(X_train.values, y_train_codes.values.astype(int), X_test, y_test)
 
 #Accuracy Measurements
 print("\n"+"The accuracy of the Logistic Model is {}".format(accuracy_score(y_test,y_pred)))
-print("The accuracy of the Deep Neural Net is {}".format('a'))
+print("The accuracy of the Deep Neural Net is {}".format(dnn_acc))
 
 print("\n"+"Runtime: {}".format(datetime.now()-start_time)) 
 
 #Visuallizations
-h1bfunctions.visualize(xs)
+#h1bfunctions.visualize(xs)
