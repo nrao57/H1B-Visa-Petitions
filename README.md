@@ -11,11 +11,22 @@ I will use both **Logistic Regression** and a **Deep Neural Network** developed 
 The dataset can be found on [Kaggle](https://www.kaggle.com/nsharan/h-1b-visa)
 
 ## Summary Statistics 
-After cleaning and formatting the data, here are some basic statistics about the quantitative variables
+Here are some basic statistics about the wages of the applicants
+
+|Statistic| Prevailing Wage |
+|:-------:|:---------:|
+|count    |3,002,373|  
+|mean     |146,998|    
+|std      |5,287,609|   
+|min      |0|         
+|25%      |54,371|      
+|50%      |65,021|    
+|75%      |81,432|     
+|max      |6.997607e+09|    
 
 Here are some statistics on the qualitative variables
 
-|Statistic| EMPLOYERS | JOB_TITLE | FULL_TIME_POSITION | WORKSITE |
+|Statistic| Employers | Job Title | Full Time Position | Worksite |
 |:-------:|:---------:|:---------:|:------------------:|:--------:|
 | Number  | 263014    |  287550   | 3                  |    18622 |
 |Most Popular| INFOSYS LIMITED | PROGRAMMER ANALYST | FULL TIME | NEW YORK, NEW YORK|
