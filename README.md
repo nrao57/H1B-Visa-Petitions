@@ -8,6 +8,8 @@ Can we use machine learning and data analytics to predict who will be successful
 
 I will use both **Logistic Regression** and a **Deep Neural Network** developed in TensorFlow and compare the two methods and their respective accuracy.
 
+The dataset can be found on [Kaggle](https://www.kaggle.com/nsharan/h-1b-visa)
+
 ## Summary Statistics 
 
 
