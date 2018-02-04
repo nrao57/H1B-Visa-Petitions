@@ -32,7 +32,9 @@ Here are some statistics on the qualitative variables
 |Most Popular| INFOSYS LIMITED | PROGRAMMER ANALYST | FULL TIME | NEW YORK, NEW YORK|
 
 
-## Simple Visuallizations
+## H-1B Destination Visuallization
+This map shows where in the US are the applicants trying to work
+![](https://github.com/nrao57/h1b_map.png)
 
 
 ## Conclusions 
