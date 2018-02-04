@@ -35,7 +35,7 @@ Here are some statistics on the qualitative variables
 ## H-1B Destination Visuallization
 This map shows where in the US are the applicants trying to work
 
-![h1b map](https://github.com/nrao57/H1B-Visa-Petitions-/h1b_map.png)
+![h1b map](H1B-Visa-Petitions-/h1b_map.png)
 
 
 ## Conclusions 
