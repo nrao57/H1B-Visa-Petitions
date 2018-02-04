@@ -32,9 +32,13 @@ Here are some statistics on the qualitative variables
 |Most Popular| INFOSYS LIMITED | PROGRAMMER ANALYST | FULL TIME | NEW YORK, NEW YORK|
 
 
-## Simple Visuallizations
+## H-1B Destination Visuallization
+This map shows where in the US are the applicants trying to work
+
+![h1b map](https://github.com/nrao57/H1B-Visa-Petitions-/blob/master/h1b_map.png)
 
 
 ## Conclusions 
 The accuracy of the Logistic Regression Model is 0.954635108481 or **95%** 
 
+The accuracy of a Neural Network with 2 hidden layers with 100 neurons each (a relatively small network) is 0.955852508545 or **96%**
