@@ -36,4 +36,5 @@ Here are some statistics on the qualitative variables
 
 
 ## Conclusions 
+The accuracy of the Logistic Regression Model is 0.954635108481 or **95%** 
 
