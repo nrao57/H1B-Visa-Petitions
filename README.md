@@ -39,10 +39,12 @@ This map shows where in the US are the applicants trying to work
 
 ## Neural Network Training
 Architecture
+
 ![nn](https://github.com/nrao57/H1B-Visa-Petitions-/blob/master/NeuralNetworkArchitecture.png)
 
 Training
-![nn](https://github.com/nrao57/H1B-Visa-Petitions-/blob/master/NeuralNetworkArchitecture.png)
+
+![nn](https://github.com/nrao57/H1B-Visa-Petitions-/blob/master/NeuralNetworkTraining.png)
 
 ## Conclusions 
 The accuracy of the Logistic Regression Model is 0.954635108481 or **95%** 
