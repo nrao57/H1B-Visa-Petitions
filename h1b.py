@@ -41,11 +41,13 @@ y_pred=LR.predict(scaler.transform(X_test))
 
 #Deep Neural Net
 y_train_codes = y_train.astype('category').cat.codes #convert y_training labels (certified = 0, denied = 1)
-dnn_acc = DeepNN(X_train.values, y_train_codes.values.astype(int), X_test, y_test)
+y_test_codes = y_test.astype('category').cat.codes
+dnn_acc = DeepNN(X_train.values, y_train_codes.values.astype(int), X_test.values, y_test_codes.values.astype(int))
 
 #Accuracy Measurements
 print("\n"+"The accuracy of the Logistic Model is {}".format(accuracy_score(y_test,y_pred)))
-print("The accuracy of the Deep Neural Net is {}".format(dnn_acc))
+print("The accuracy of the Deep Neural Net for training data is {}".format(dnn_acc[0]))
+print("The accuracy of the Deep Neural Net for test set is {}".format(dnn_acc[1]))
 
 print("\n"+"Runtime: {}".format(datetime.now()-start_time)) 
 

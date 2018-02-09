@@ -18,7 +18,7 @@ def DeepNN(X_train, y_train, X_test, y_test):
     n_outputs = 2 #dimension of possible outcomes (notcert=0,cert=1)
 
     ##placeholders
-    X = tf.placeholder(X_train.dtype, [X_train.shape[0],X_train.shape[1]])
+    X = tf.placeholder(X_train.dtype, shape=(None,n_inputs))
     y = tf.placeholder(tf.int64)
 
     ##Neuron Layers
@@ -62,6 +62,11 @@ def DeepNN(X_train, y_train, X_test, y_test):
             summary_str = loss_summary.eval(feed_dict=feed)
             file_writer.add_summary(summary_str, epoch)
         acc_train = accuracy.eval(feed_dict=feed)
-    return acc_train 
+        acc_test = accuracy.eval(feed_dict = {X:X_test, y:y_test})
+    
         
+    return acc_train, acc_test 
+
+
+
 
