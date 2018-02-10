@@ -46,7 +46,7 @@ def DeepNN(X_train, y_train, X_test, y_test):
     def batch_getter(batch_size, X, y):
         rand_ind = np.random.randint(0,X.shape[0],batch_size)
         x_batch = X[rand_ind,:]
-        y_batch = y_labels[rand_ind]
+        y_batch = y[rand_ind]
         return x_batch, y_batch
 
     n_epochs = 100
@@ -57,7 +57,8 @@ def DeepNN(X_train, y_train, X_test, y_test):
     with tf.Session() as sess:
         init.run()
         for epoch in range(n_epochs):
-            feed = {X:X_train, y: y_train}
+            X_bat, y_bat = batch_getter(batch_size, X_train, y_train)
+            feed = {X:X_bat, y: y_bat}
             sess.run(training_op, feed_dict=feed)
             summary_str = loss_summary.eval(feed_dict=feed)
             file_writer.add_summary(summary_str, epoch)
